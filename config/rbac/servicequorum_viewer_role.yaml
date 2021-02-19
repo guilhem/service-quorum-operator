@@ -1,0 +1,20 @@
+# permissions for end users to view servicequorums.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: servicequorum-viewer-role
+rules:
+- apiGroups:
+  - network.barpilot.io
+  resources:
+  - servicequorums
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - network.barpilot.io
+  resources:
+  - servicequorums/status
+  verbs:
+  - get

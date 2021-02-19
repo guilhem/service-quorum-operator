@@ -1,0 +1,24 @@
+# permissions for end users to edit servicequorums.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: servicequorum-editor-role
+rules:
+- apiGroups:
+  - network.barpilot.io
+  resources:
+  - servicequorums
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - network.barpilot.io
+  resources:
+  - servicequorums/status
+  verbs:
+  - get

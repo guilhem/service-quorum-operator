@@ -1,0 +1,7 @@
+apiVersion: network.barpilot.io/v1alpha1
+kind: ServiceQuorum
+metadata:
+  name: servicequorum-sample
+spec:
+  # Add fields here
+  foo: bar

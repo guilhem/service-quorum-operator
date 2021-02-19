@@ -1,0 +1,17 @@
+componentConfig: true
+domain: barpilot.io
+layout: go.kubebuilder.io/v3
+projectName: service-quorum-operator
+repo: github.com/guilhem/service-quorum-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: barpilot.io
+  group: network
+  kind: ServiceQuorum
+  path: github.com/guilhem/service-quorum-operator/api/v1alpha1
+  plural: servicesquorum
+  version: v1alpha1
+version: "3"
